@@ -1,32 +1,25 @@
-0-Day : Serveur Survie, PVP-Faction, Economie, Moddé
+0-Day : Serveur PVP, Survie PVP-Faction, Economie, Moddé
 
 Version 1.8.9
 
 V1 : Vanilla, Plugin
 V2 : + Moddé
 
-Réseaux Sociaux (Marque social) : Insta, Tiktok
+Réseaux Sociaux (Marque social) : Discord, Insta, Tiktok
 
-Plugin: TPA, Openinv, Anti-cheat, TopLuck, SuperVanish
-Plugin 0-Day {
-  Commandes rapides : /gm 1, etc...
-  Home
-  Commandes: Feed, Craft, Furnace (Eventuellement accessible avec un grade)
+Spawn:
+  	Style Western (Engagement d'un builder pro)
+  	Moyen de téléportation aléatoire sur la seconde map (map monde)
 
-}
-
---> On log :
-  Tp au Spawn
-
+Survie PVP-FAC:
+	Map monde survie, 15'000 x 15'000
+	Plugin: TPA, Openinv, Anti-cheat, TopLuck, SuperVanish
+	Plugin 0-Day:
+		Commandes rapides : /gm 1, etc...
+		Home
+	  	Commandes: Feed, Craft, Furnace (Eventuellement accessible avec un grade)
 
 PVP: 
-	SkyWars: 
+	SkyWars, BedWars: (Bedwars pour + tard) 
 		Iles: Normal, {differents biomes}, NoVoid, chateau, 
 
-
---> Spawn :
-  Style Western (Enagement d'un builder expert)
-  Moyen de téléportation aléatoire sur la seconde map (map monde)
-
-
-Map monde, 15'000 x 15'000
