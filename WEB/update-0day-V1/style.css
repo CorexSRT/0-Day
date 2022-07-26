@@ -1,0 +1,218 @@
+@import url('https://fonts.gooleapis.com/css?family=Oswald:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dongle&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: 'Anek Malayalam', sans-serif;
+  color: #fff;
+}
+body {
+  background: #222;/* background: linear-gradient(45deg, #0c192c, #0c192ce6); #0c192c   #434750  */ /*#1898ff*/
+}
+body > div
+
+
+hr.header {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, #FF7F18, #FF0409);
+  border: none;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  color: #FF7F18;
+  text-shadow: #FF7F18 0 0 12px,
+  #FF7F18 0 0 24px,
+  #FF7F18 0 0 36px;
+}
+
+/*==================== Play Button ====================*/
+a.PlayButton {
+  position: relative;
+  transform: translate(50px, 10em);
+  background: linear-gradient(to right, #FF7F18, #FF0409);
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  box-shadow: 0 20px 25px #0690fd44;
+  overflow: hidden;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2em;
+}
+a.PlayButton:hover {
+  width: 200px;
+  border-radius: 15px;
+  transition-delay: 0.5s;
+}
+a.PlayButton::before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+a.PlayButton:hover::before {
+  transform: rotate(45deg) translate(50px, -50px) scale(1.1);
+}
+a.PlayButton::after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg) translate(-50px, 50px);
+  transition: 0.5s;
+}
+a.PlayButton:hover::after {
+  transform: rotate(45deg) translate(50px, -50px);
+  transition-delay: 1s;
+}
+a.PlayButton span.PlayButton {
+  opacity: 0;
+  white-space: nowrap;
+  transition: 0.5s;
+  transform: translateX(-30px);
+}
+a.PlayButton:hover span.PlayButton {
+  opacity: 1;
+  transition-delay: 0.75s;
+  transform: translateX(10px);
+}
+
+/*==================== BACKGROUND ====================*/
+.main-container {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.bubbles{
+  position: relative;
+  display: flex;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 
+  0 0 50px #4fc3dc, 
+  0 0 100px #4fc3dc;
+  animation: bubbles linear infinite;
+  animation-duration: calc(300s / var(--i));
+} 
+.bubbles span:nth-child(even){
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 
+  0 0 50px #ff2d75, 
+  0 0 100px #ff2d75;
+}
+
+@keyframes bubbles 
+{
+  0% 
+  {
+    transform: translateY(100vh) scale(0);
+  }
+  100% 
+  {
+    transform: translateY(-100vh) scale(1);
+  }
+}
+
+/*==================== NAVBAR ====================*/ 
+nav {
+  position: absolute;
+  display: flex;
+  /* justify-content: center; */
+  /* margin-left: 10px; */
+  align-items: center;
+  min-height: 55vh;
+}
+a::before {
+  content: '> ';
+}
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  background: #3e3f46;
+  padding: 15px;
+  z-index: var(--j);
+  transition: 0.5s;
+}
+ul li:hover {
+  /* background: #33a3ee; */
+  transform: translateX(50px);
+  cursor: pointer;
+}
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+ul li:hover::before {
+  /* background: #1f5378; */
+}
+ul li::after {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+ul li:hover::after {
+  /* background: #2982b9; */
+}
+ul li a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: 0.5s;
+}
+ul li:hover a {
+  color: #fff;
+}
+ul li:last-child:after {
+  box-shadow: -100px 100px 20px rgba(0,0,0,0.25);
+}
